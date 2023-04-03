@@ -1,0 +1,55 @@
+@use "../global/variable.scss" as var;
+
+.fail-page {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  padding: 267px 0 0 0;
+  font-family: var.$primary-font;
+  background-color: var(--bg-color);
+
+  &::after {
+    @media (min-width: var.$desktop-width) {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      width: var(--bg-form-width);
+      background-image: var(--bg-form);
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    align-items: center;
+    height: 100vh;
+    padding: 0;
+  }
+
+  .container {
+    @media (min-width: var.$desktop-width) {
+      padding: 0;
+    }
+  }
+}
+
+.fail-page__text {
+  margin: 0;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  color: var(--color-text);
+  /* stylelint-disable-next-line */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: var(--title-fill-color);
+  background-image: var(--color-form-mobile-title);
+
+  @media (min-width: var.$desktop-width) {
+    max-width: 710px;
+    margin-left: var(--bg-form-indent-small);
+    font-size: 44px;
+    line-height: 50px;
+  }
+}

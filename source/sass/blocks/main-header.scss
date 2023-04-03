@@ -1,0 +1,129 @@
+@use "../global/variable.scss" as var;
+
+.main-header {
+  width: 100%;
+  padding: 84px 0 34px 0;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 50px 0;
+  }
+}
+
+.main-header__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.main-header__logo {
+  color: var(--color-logo);
+}
+
+.main-header__copy-message {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  padding: 11px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: var.$black;
+  background-image: linear-gradient(180deg, var.$solitude 0%, var.$white 100%);
+  border-radius: 46px;
+  transform: translate(-50%, -200px);
+  transition: all 0.3s ease-out;
+
+  @media (min-width: var.$tablet-width) {
+    &--active {
+      min-width: 200px;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    &--active {
+      min-width: 292px;
+    }
+  }
+}
+
+.main-header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-header__nav-item {
+  position: relative;
+
+  &:first-child {
+    @media (max-width: var.$mobile-width-only) {
+      display: none;
+    }
+  }
+
+  span {
+    display: block;
+    max-width: 250px;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--color-text);
+  }
+
+  .main-header__tooltip {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    display: none;
+    min-width: 70px;
+    padding: 3px;
+    font-size: 10px;
+    text-align: center;
+    background-color: var.$solitude;
+    color: var.$black;
+    border-radius: 5px;
+    transform: translateX(-50%);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      width: 15px;
+      height: 15px;
+      background-image: url("../img/sprite.svg#icon-tooltip");
+      transform: translateX(-50%);
+    }
+
+    @media (min-width: var.$desktop-width) {
+      min-width: 106px;
+    }
+  }
+}
+
+.main-header__nav-button {
+  padding: 0;
+  border: none;
+  background-color: var.$transparent;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.main-header__nav-button:hover + .main-header__tooltip {
+  display: block;
+}

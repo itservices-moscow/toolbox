@@ -1,0 +1,225 @@
+@use "../global/variable.scss" as var;
+
+.main-achievements {
+  position: relative;
+  display: grid;
+  padding: 56px 0 0 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--bg-main-mobile-width);
+    height: var(--bg-main-mobile-height);
+    background-image: var(--bg-main-mobile);
+  }
+
+  p {
+    max-width: 310px;
+    margin: 0 0 11px 0;
+
+    @media (min-width: var.$tablet-width) {
+      max-width: 500px;
+      margin: 0 0 7px 0;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 82px 0 0 0;
+
+    &::after {
+      top: var(--bg-main-desktop-top-position);
+      width: var(--bg-main-desktop-top-width);
+      height: var(--bg-main-desktop-top-height);
+      background-image: var(--bg-main-desktop-top);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: var(--bg-main-desktop-middle-position);
+      right: 0;
+      width: var(--bg-main-desktop-middle-width);
+      height: var(--bg-main-desktop-middle-height);
+      background-image: var(--bg-main-desktop-middle);
+    }
+  }
+}
+
+.main-achievements__slider.swiper {
+  position: relative;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0 0 72px 0;
+  padding: 0 0 0 35px;
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 auto 60px auto;
+    padding: 0 0 0 65px;
+  }
+
+  .swiper-wrapper {
+    max-width: 100%;
+  }
+}
+
+.main-achievements__slide.swiper-slide {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 270px;
+  max-height: 400px;
+  width: 100%;
+  text-align: center;
+
+  p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    color: var.$black;
+
+    &:first-of-type {
+      text-transform: uppercase;
+    }
+
+    span {
+      font-weight: 500;
+      /* stylelint-disable-next-line */
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  h3 {
+    margin: 0 0 22px 0;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 30px;
+    color: var.$black;
+    text-align: center;
+
+    @media (min-width: var.$tablet-width) {
+      font-size: 27px;
+      line-height: 34px;
+    }
+  }
+
+  img {
+    &:first-of-type {
+      text-align: center;
+    }
+
+    &:last-of-type {
+      position: absolute;
+      left: 4px;
+      width: calc(100% - 7px);
+      bottom: 3px;
+    }
+  }
+
+  &:nth-child(even) {
+    text-align: left;
+
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      text-transform: unset;
+    }
+
+    a {
+      color: var.$royal-blue;
+    }
+
+    @media (max-width: var.$mobile-width-only) {
+      display: none;
+    }
+  }
+
+  @media (min-width: var.$tablet-width) {
+    max-width: 323px;
+    max-height: 476px;
+
+    p {
+      font-size: 28px;
+    }
+  }
+}
+
+.main-achievements__slide-wrapper {
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  background-image: linear-gradient(180deg, var.$alice-blue 0%, var.$white 100%);
+  border-radius: 32px;
+}
+
+.main-achievements__slide-box {
+  min-height: 400px;
+  padding: 34px 18px;
+
+  @media (min-width: var.$tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 480px;
+    padding: 40px 26px;
+  }
+}
+
+.main-achievements__slide-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 0 22px 0;
+}
+
+.main-achievements__buttons {
+  display: flex;
+  justify-content: space-between;
+  min-width: 75px;
+  margin: auto 0 0 0;
+}
+
+.main-achievements__button {
+  height: 20px;
+  padding: 0;
+  border: none;
+  background-color: var.$transparent;
+
+  &--next {
+    transform: rotate(180deg);
+  }
+}
+
+.main-achievements__next-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  height: 38px;
+  width: 76px;
+  margin: 0 0 36px 0;
+  border: none;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  overflow: hidden;
+  background-color: var.$transparent;
+  background-image: var(--bg-item);
+
+  @media (min-width: var.$tablet-width) {
+    width: 132px;
+    height: 66px;
+    margin: 0 0 85px 0;
+  }
+
+  svg {
+    @media (min-width: var.$tablet-width) {
+      width: 54px;
+      height: 17px;
+    }
+  }
+}

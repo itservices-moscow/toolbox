@@ -1,0 +1,88 @@
+@use "../global/variable.scss" as var;
+
+.page-404 {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  padding: 147px 0 0 0;
+  font-family: var.$primary-font;
+  background-color: var(--bg-color);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: var(--bg-404-top-indent);
+    left: 0;
+    height: var(--bg-404-mobile-top-height);
+    width: var(--bg-404-mobile-top-width);
+    background-image: var(--bg-404-mobile-top);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: var(--bg-404-mobile-bottom-height);
+    width: var(--bg-404-mobile-bottom-width);
+    background-image: var(--bg-404-mobile-bottom);
+  }
+
+  @media (min-width: var.$desktop-width) {
+    align-items: center;
+    height: 100vh;
+    padding: 0;
+
+    &::after {
+      top: 0;
+      left: 0;
+      height: var(--bg-404-desktop-top-height);
+      width: var(--bg-404-desktop-top-width);
+      background-image: var(--bg-404-desktop-top);
+    }
+
+    &::before {
+      top: unset;
+      bottom: 0;
+      right: 0;
+      height: var(--bg-404-desktop-bottom-height);
+      width: var(--bg-404-desktop-bottom-width);
+      background-image: var(--bg-404-desktop-bottom);
+    }
+  }
+}
+
+.page-404__code {
+  margin: 0 auto 16px auto;
+  font-weight: 600;
+  font-size: 63px;
+  line-height: 63px;
+  text-align: center;
+  color: var(--color-not-found);
+  /* stylelint-disable-next-line */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: var(--title-fill-color);
+  background-image: var(--bg-not-found);
+
+  @media (min-width: var.$desktop-width) {
+    max-width: 390px;
+    margin: 0 auto 36px auto;
+    font-size: 198px;
+    line-height: 198px;
+  }
+}
+
+.page-404__text {
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--color-text);
+
+  @media (min-width: var.$desktop-width) {
+    font-size: 28px;
+    line-height: 60px;
+  }
+}

@@ -1,0 +1,34 @@
+@use "../global/variable.scss" as var;
+
+.button {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  font-family: var.$secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: var.$white;
+  border: none;
+  background-image: var(--bg-button);
+  background-color: var.$royal-blue-2;
+  background-position: 50% 0;
+  background-size: 150% 100%;
+  border-radius: 9px;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.5s ease-out;
+
+  &:hover {
+    background-position: 100% 0;
+  }
+
+  &:active {
+    color: rgba(var.$white, 0.5);
+  }
+
+  &:focus {
+    background-position: 100% 0;
+  }
+}

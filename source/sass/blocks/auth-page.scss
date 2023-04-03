@@ -1,0 +1,131 @@
+@use "../global/variable.scss" as var;
+
+.auth-page {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 96px 0 30px 0;
+  font-family: var.$primary-font;
+  background-color: var(--bg-color);
+
+  &::after {
+    @media (min-width: var.$desktop-width) {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      width: var(--bg-form-width);
+      background-image: var(--bg-form);
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    height: 100vh;
+  }
+}
+
+.auth-page__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  @media (min-width: var.$desktop-width) {
+    max-width: 424px;
+    min-height: 55.6%;
+    margin-left: var(--bg-form-indent);
+  }
+}
+
+.auth-page__title {
+  margin: 0 0 48px 0;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 60px;
+  color: var(--color-text);
+  /* stylelint-disable-next-line */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: var(--title-fill-color);
+  background-image: var(--color-form-mobile-title);
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 0 28px 0;
+    font-size: 44px;
+    line-height: 60px;
+    background-image: var(--color-form-text);
+  }
+}
+
+.auth-page__form {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  width: 100%;
+
+  @media (min-width: var.$desktop-width) {
+    gap: 60px;
+  }
+}
+
+.auth-page__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-page__input-icon {
+  position: absolute;
+  right: 0;
+  bottom: 12px;
+
+  @media (min-width: var.$desktop-width) {
+    bottom: 17px;
+    right: 35px;
+    width: 28px;
+    height: 25px;
+  }
+}
+
+.auth-page__comment {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0 0 0;
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0;
+  }
+}
+
+.auth-page__link {
+  display: inline-block;
+  margin: 0 auto 15px auto;
+  font-family: var.$secondary-font;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: var.$dodger-blue;
+}
+
+.auth-page__text {
+  max-width: 220px;
+  margin: 0 auto;
+  font-family: var.$additional-font;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  color: var(--color-auth-message);
+
+  @media (min-width: var.$desktop-width) {
+    max-width: unset;
+  }
+}
+
+.auth-page__button {
+  @media (min-width: var.$desktop-width) {
+    margin: 0 0 60px 0;
+  }
+}

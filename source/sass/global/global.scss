@@ -1,0 +1,54 @@
+@use "../global/variable.scss" as var;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+h2 {
+  max-width: 320px;
+  margin: 0 0 12px 0;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  text-transform: capitalize;
+  color: var(--color-title);
+  /* stylelint-disable-next-line */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: var(--title-fill-color);
+  background-image: var(--title-bg);
+
+  @media (min-width: var.$tablet-width) {
+    max-width: 570px;
+    margin: 0 0 16px 0;
+    font-size: 44px;
+    line-height: 60px;
+  }
+}

@@ -1,0 +1,154 @@
+/* Fonts */
+$primary-font: "Jost", "Arial", sans-serif;
+$secondary-font: "SF Pro Display", "Arial", sans-serif;
+$additional-font: "Open Sans", "Arial", sans-serif;
+
+/* Breakpoints */
+
+$mobile-width: 390px;
+$mobile-width-only: 767px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
+/* Colors */
+
+$white: #ffffff;
+$black: #000000;
+$bunker: #25272a;
+$aubergine: #231f20;
+$ebony: #2c2e33;
+$ebony-2: #313236;
+$grey: #828282;
+$solitude: #e9efff;
+$solitude-2: #dfe5f5;
+$alice-blue: #f4f7ff;
+$royal-blue: #477bf5;
+$royal-blue-2: #4e72f6;
+$midnight-blue: #03014c;
+$dodger-blue: #2378ef;
+$turquoise-blue: #60e1f3;
+$tuna: #44474e;
+$tuna-2: #484a50;
+$transparent: transparent;
+$text-gradient: linear-gradient(95.5deg, $turquoise-blue -12.58%, $royal-blue 54.39%);
+$item-light-gradient: linear-gradient(180deg, $solitude 0%, $white 100%);
+$item-dark-gradient: linear-gradient(180deg, $ebony 0%, $ebony-2 100%);
+$form-mobile-gradient: linear-gradient(91.48deg, $turquoise-blue -19.75%, $royal-blue-2 51.26%);
+$form-gradient: linear-gradient(91.64deg, $turquoise-blue -30.48%, $royal-blue-2 51.39%);
+$button-light-gradient: linear-gradient(93.55deg, $turquoise-blue -0.84%, $royal-blue-2 116.56%);
+$button-dark-gradient: linear-gradient(273.67deg, $tuna -20.9%, $tuna-2 89.81%);
+$not-found-gradient: linear-gradient(99.42deg, $turquoise-blue 4.9%, $royal-blue-2 80.99%);
+
+/* Paths */
+
+$bg-main-mobile-light: url("../img/sprite.svg#bg-main-mobile-light");
+$bg-main-desktop-top-light: url("../img/sprite.svg#bg-main-desktop-top-light");
+$bg-main-desktop-middle-light: url("../img/sprite.svg#bg-main-desktop-middle-light");
+$bg-main-desktop-bottom-light: url("../img/sprite.svg#bg-main-desktop-bottom-light");
+$bg-main-mobile-color: url("../img/bg-main-mobile-color.svg");
+$bg-main-desktop-top-color: url("../img/bg-main-desktop-top-color.svg");
+$bg-main-desktop-middle-color: url("../img/bg-main-desktop-middle-color.svg");
+$bg-main-desktop-bottom-color: url("../img/bg-main-desktop-bottom-color.svg");
+$bg-main-mobile-dark: url("../img/sprite.svg#bg-main-mobile-dark");
+$bg-main-desktop-top-dark: url("../img/sprite.svg#bg-main-desktop-top-dark");
+$bg-main-desktop-middle-dark: url("../img/sprite.svg#bg-main-desktop-middle-dark");
+$bg-main-desktop-bottom-dark: url("../img/sprite.svg#bg-main-desktop-bottom-dark");
+$bg-form-light: url("../img/bg-form-desktop-light.svg");
+$bg-form-dark: url("../img/bg-form-desktop-dark.svg");
+$bg-form-color: url("../img/bg-form-desktop-color.svg");
+$bg-404-mobile-top-light: url("../img/bg-404-mobile-top-light.svg");
+$bg-404-mobile-bottom-light: url("../img/bg-404-mobile-bottom-light.svg");
+$bg-404-desktop-top-light: url("../img/bg-404-desktop-top-light.svg");
+$bg-404-desktop-bottom-light: url("../img/bg-404-desktop-bottom-light.svg");
+$bg-404-mobile-top-color: url("../img/bg-404-mobile-top-color.svg");
+$bg-404-mobile-bottom-color: url("../img/bg-404-mobile-bottom-color.svg");
+$bg-404-desktop-top-color: url("../img/bg-404-desktop-top-color.svg");
+$bg-404-desktop-bottom-color: url("../img/bg-404-desktop-bottom-color.svg");
+$bg-404-mobile-top-dark: url("../img/bg-404-mobile-top-dark.svg");
+$bg-404-mobile-bottom-dark: url("../img/bg-404-mobile-bottom-dark.svg");
+$bg-404-desktop-top-dark: url("../img/bg-404-desktop-top-dark.svg");
+$bg-404-desktop-bottom-dark: url("../img/bg-404-desktop-bottom-dark.svg");
+
+/* Size */
+
+$bg-main-mobile-light-width: 286px;
+$bg-main-mobile-light-height: 512px;
+$bg-main-desktop-top-light-width: 820px;
+$bg-main-desktop-top-light-height: 328px;
+$bg-main-desktop-middle-light-width: 410px;
+$bg-main-desktop-middle-light-height: 492px;
+$bg-main-desktop-bottom-light-width: 410px;
+$bg-main-desktop-bottom-light-height: 164px;
+$bg-main-mobile-color-width: 345px;
+$bg-main-mobile-color-height: 517px;
+$bg-main-desktop-top-color-width: 665px;
+$bg-main-desktop-top-color-height: 555px;
+$bg-main-desktop-middle-color-width: 443px;
+$bg-main-desktop-middle-color-height: 555px;
+$bg-main-desktop-bottom-color-width: 332px;
+$bg-main-desktop-bottom-color-height: 555px;
+$bg-main-mobile-dark-width: 287px;
+$bg-main-mobile-dark-height: 512px;
+$bg-main-desktop-top-dark-width: 820px;
+$bg-main-desktop-top-dark-height: 328px;
+$bg-main-desktop-middle-dark-width: 410px;
+$bg-main-desktop-middle-dark-height: 492px;
+$bg-main-desktop-bottom-dark-width: 410px;
+$bg-main-desktop-bottom-dark-height: 164px;
+$bg-form-width-light: 650px;
+$bg-form-width-color: 562px;
+$bg-form-width-dark: 374px;
+$bg-404-mobile-top-width-light: 118px;
+$bg-404-mobile-bottom-width-light: 213px;
+$bg-404-desktop-top-width-light: 374px;
+$bg-404-desktop-bottom-width-light: 748px;
+$bg-404-mobile-top-width-color: 147px;
+$bg-404-mobile-bottom-width-color: 146px;
+$bg-404-desktop-top-width-color: 374px;
+$bg-404-desktop-bottom-width-color: 655px;
+$bg-404-mobile-top-width-dark: 118px;
+$bg-404-mobile-bottom-width-dark: 213px;
+$bg-404-desktop-top-width-dark: 374px;
+$bg-404-desktop-bottom-width-dark: 748px;
+$bg-404-mobile-top-height-light: 294px;
+$bg-404-mobile-bottom-height-light: 373px;
+$bg-404-desktop-top-height-light: 655px;
+$bg-404-desktop-bottom-height-light: 374px;
+$bg-404-mobile-top-height-color: 294px;
+$bg-404-mobile-bottom-height-color: 343px;
+$bg-404-desktop-top-height-color: 749px;
+$bg-404-desktop-bottom-height-color: 374px;
+$bg-404-mobile-top-height-dark: 294px;
+$bg-404-mobile-bottom-height-dark: 373px;
+$bg-404-desktop-top-height-dark: 655px;
+$bg-404-desktop-bottom-height-dark: 374px;
+
+/* Position */
+
+$bg-main-desktop-top-position-light: 0;
+$bg-main-desktop-middle-position-light: -80px;
+$bg-main-desktop-bottom-indent-light: 210px;
+$bg-main-desktop-top-position-color: -138px;
+$bg-main-desktop-middle-position-color: -140px;
+$bg-main-desktop-bottom-indent-color: 550px;
+$bg-main-desktop-top-position-dark: 0;
+$bg-main-desktop-middle-position-dark: -80px;
+$bg-main-desktop-bottom-indent-dark: 210px;
+$bg-form-indent-light: 115px;
+$bg-form-indent-small-light: 37px;
+$bg-form-indent-color: 155px;
+$bg-form-indent-small-color: 77px;
+$bg-form-indent-dark: 255px;
+$bg-form-indent-small-dark: 178px;
+$bg-404-top-indent-light: 195px;
+$bg-404-bottom-indent-light: 436px;
+$bg-404-top-indent-color: 267px;
+$bg-404-bottom-indent-color: 465px;
+$bg-404-top-indent-dark: 182px;
+$bg-404-bottom-indent-dark: 423px;
+
+/* Other */
+
+$none: none;
+$unset: unset;
+$text: text;

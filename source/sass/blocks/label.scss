@@ -1,0 +1,9 @@
+@use "../global/variable.scss" as var;
+
+.label {
+  display: inline-block;
+  font-family: var.$secondary-font;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--color-text);
+}

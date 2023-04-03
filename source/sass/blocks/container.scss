@@ -1,0 +1,12 @@
+@use "../global//variable.scss" as var;
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 35px;
+  margin: 0 auto;
+
+  @media (min-width: var.$desktop-width) {
+    padding: 0 65px;
+  }
+}
